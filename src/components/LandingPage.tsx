@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import Navbar from "@/components/Navbar";
 import { 
   Eye, 
   TrendingUp, 
@@ -19,6 +21,7 @@ import heroImage from "@/assets/hero-dashboard.jpg";
 const LandingPage = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Navbar />
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-hero" />
@@ -49,7 +52,7 @@ const LandingPage = () => {
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             <Button variant="outline" size="lg" className="text-lg px-8 py-6">
-              Request a Demo
+              Pricing Plan
             </Button>
           </div>
           
@@ -193,8 +196,34 @@ const LandingPage = () => {
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             <Button variant="outline" size="lg" className="text-lg px-8 py-6">
-              Request a Demo
+              Pricing Plan
             </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 bg-muted/30">
+        <div className="container px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              FAQ – Need Clarification?
+            </h2>
+          </div>
+          
+          <div className="max-w-3xl mx-auto">
+            <Accordion type="single" collapsible className="space-y-4">
+              {faqs.map((faq, index) => (
+                <AccordionItem key={index} value={`item-${index}`} className="bg-card rounded-lg shadow-card px-6">
+                  <AccordionTrigger className="text-left">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
           </div>
         </div>
       </section>
@@ -238,7 +267,7 @@ const LandingPage = () => {
           </div>
           
           <div className="border-t pt-8 text-center text-sm text-muted-foreground">
-            <p>&copy; 2024 CompetitorMonitor. All rights reserved.</p>
+            <p>&copy; 2024 Kompyte. All rights reserved.</p>
           </div>
         </div>
       </footer>
@@ -319,6 +348,65 @@ const testimonials = [
     name: "Emily Johnson",
     role: "Growth Analyst",
     quote: "Finally, a comprehensive view of our competitive landscape. The insights drive all our marketing decisions."
+  }
+];
+
+const faqs = [
+  {
+    question: "What is Kompyte and why do I need it?",
+    answer: "Kompyte is a competitive intelligence platform that automatically monitors your competitors across multiple channels. You need it to stay ahead of market changes, react quickly to competitor moves, and make informed strategic decisions."
+  },
+  {
+    question: "What data sources does Kompyte monitor?",
+    answer: "We monitor websites, social media platforms (X, LinkedIn, Reddit), job postings, press releases, funding announcements, product launches, pricing changes, and more."
+  },
+  {
+    question: "Does Kompyte integrate with other software and tools?",
+    answer: "Yes, we integrate with popular platforms like Slack, Microsoft Teams, Notion, Email, Salesforce, HubSpot, and many other CRM and productivity tools."
+  },
+  {
+    question: "Does Kompyte offer support for SSO?",
+    answer: "Yes, Single Sign-On (SSO) is available with our Unlimited plan, along with advanced user permission management."
+  },
+  {
+    question: "How long does it take to start seeing competitor insights?",
+    answer: "You'll start receiving insights within hours of setup. Our AI begins monitoring immediately and delivers your first comprehensive report within 24 hours."
+  },
+  {
+    question: "Are there any onboarding or support fees?",
+    answer: "No, all plans include comprehensive onboarding, training, and ongoing support at no additional cost. Every customer gets a dedicated success manager."
+  },
+  {
+    question: "Can we change out competitors and if so, is there any cost associated with this change?",
+    answer: "Yes, you can add, remove, or change competitors at any time within your plan limits. There are no additional costs for making these changes."
+  },
+  {
+    question: "Do you charge extra for integrations with other platforms?",
+    answer: "No, all integrations are included in your plan at no additional cost. We believe in providing complete value without hidden fees."
+  },
+  {
+    question: "Is there a limit to the number of Battlecards and/or reports that can be created?",
+    answer: "All plans include unlimited Battlecards and reports. Create as many as you need to support your sales and strategy teams."
+  },
+  {
+    question: "Can Battlecards be created for competitors outside of the tracked competitors included in our subscription?",
+    answer: "Yes, you can create Battlecards for any competitor. However, automated monitoring and real-time updates are limited to your tracked competitors within your plan."
+  },
+  {
+    question: "What is your pricing based on?",
+    answer: "Our pricing is based on the number of companies you want to track and the number of user licenses you need. This gives you predictable costs as you scale."
+  },
+  {
+    question: "How do you define a 'user'?",
+    answer: "A user is anyone who needs access to the platform, including view-only access. Each user gets their own login and can be assigned different permission levels."
+  },
+  {
+    question: "Am I locked into a long-term contract?",
+    answer: "No, we offer flexible monthly and annual plans. You can upgrade, downgrade, or cancel at any time with no long-term commitments required."
+  },
+  {
+    question: "What types of payments do you accept?",
+    answer: "We accept all major credit cards, ACH transfers, and can accommodate purchase orders for enterprise customers. Annual plans can be paid via invoice."
   }
 ];
 
