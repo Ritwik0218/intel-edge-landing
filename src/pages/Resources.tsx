@@ -105,7 +105,7 @@ const Resources = () => {
           </div>
           
           <div className="border-t pt-8 text-center text-sm text-muted-foreground">
-            <p>&copy; 2024 Kompyte. All rights reserved.</p>
+            <p>&copy; 2024 nirixion. All rights reserved.</p>
           </div>
         </div>
       </footer>

@@ -9,7 +9,7 @@ const Navbar = () => {
           <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-primary">
             <span className="text-lg font-bold text-primary-foreground">K</span>
           </div>
-          <span className="text-xl font-bold">Kompyte</span>
+          <span className="text-xl font-bold">nirixion</span>
         </Link>
         
         <div className="flex items-center space-x-6">

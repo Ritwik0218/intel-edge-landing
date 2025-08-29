@@ -16,7 +16,7 @@ const Login = () => {
           <CardHeader className="text-center">
             <CardTitle className="text-2xl">Welcome Back</CardTitle>
             <CardDescription>
-              Sign in to your Kompyte account
+              Sign in to your nirixion account
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-6">

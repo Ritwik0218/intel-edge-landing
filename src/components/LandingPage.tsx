@@ -275,7 +275,7 @@ const LandingPage = () => {
           </div>
           
           <div className="border-t pt-8 text-center text-sm text-muted-foreground">
-            <p>&copy; 2024 Kompyte. All rights reserved.</p>
+            <p>&copy; 2024 nirixion. All rights reserved.</p>
           </div>
         </div>
       </footer>
@@ -361,19 +361,19 @@ const testimonials = [
 
 const faqs = [
   {
-    question: "What is Kompyte and why do I need it?",
-    answer: "Kompyte is a competitive intelligence platform that automatically monitors your competitors across multiple channels. You need it to stay ahead of market changes, react quickly to competitor moves, and make informed strategic decisions."
+    question: "What is nirixion and why do I need it?",
+    answer: "nirixion is a competitive intelligence platform that automatically monitors your competitors across multiple channels. You need it to stay ahead of market changes, react quickly to competitor moves, and make informed strategic decisions."
   },
   {
-    question: "What data sources does Kompyte monitor?",
+    question: "What data sources does nirixion monitor?",
     answer: "We monitor websites, social media platforms (X, LinkedIn, Reddit), job postings, press releases, funding announcements, product launches, pricing changes, and more."
   },
   {
-    question: "Does Kompyte integrate with other software and tools?",
+    question: "Does nirixion integrate with other software and tools?",
     answer: "Yes, we integrate with popular platforms like Slack, Microsoft Teams, Notion, Email, Salesforce, HubSpot, and many other CRM and productivity tools."
   },
   {
-    question: "Does Kompyte offer support for SSO?",
+    question: "Does nirixion offer support for SSO?",
     answer: "Yes, Single Sign-On (SSO) is available with our Unlimited plan, along with advanced user permission management."
   },
   {
