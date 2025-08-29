@@ -1,9 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { 
   CheckCircle,
   ArrowRight,
@@ -13,6 +10,7 @@ import {
   Star
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
+import ROICalculator from "@/components/ROICalculator";
 
 const Pricing = () => {
   return (
@@ -113,58 +111,19 @@ const Pricing = () => {
       </section>
 
       {/* ROI Calculator */}
-      <section className="py-20">
+      <section className="py-20" style={{ backgroundColor: '#4B0082' }}>
         <div className="container px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">ROI Calculator</h2>
-              <p className="text-lg text-muted-foreground">
-                Calculate your potential return on investment
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
+                Calculate the ROI of Nirixion
+              </h2>
+              <p className="text-lg text-white/80">
+                See how much you can save with competitive intelligence automation
               </p>
             </div>
             
-            <Card className="bg-gradient-card shadow-elegant">
-              <CardContent className="p-8">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                  <div className="space-y-2">
-                    <Label htmlFor="salesReps"># of Sales Reps</Label>
-                    <Input id="salesReps" type="number" placeholder="25" />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="competitors"># of Competitors</Label>
-                    <Input id="competitors" type="number" placeholder="10" />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="competitiveness">Competitiveness Level</Label>
-                    <Select>
-                      <SelectTrigger>
-                        <SelectValue placeholder="Select level" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="low">Low</SelectItem>
-                        <SelectItem value="medium">Medium</SelectItem>
-                        <SelectItem value="high">High</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
-                </div>
-                
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 p-6 bg-primary/5 rounded-lg">
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-primary">$184,000</div>
-                    <div className="text-sm text-muted-foreground">Research Savings</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-primary">$614,709</div>
-                    <div className="text-sm text-muted-foreground">Prevented Losses</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-primary">$798,709</div>
-                    <div className="text-sm text-muted-foreground">Total ROI</div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+            <ROICalculator />
           </div>
         </div>
       </section>
